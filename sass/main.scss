@@ -129,7 +129,6 @@ header {
     margin: 0 auto 50px;
     text-align: center;
     width: 495/1200*100%;
-    outline: 1px solid red;
     border: none;
     text-transform: uppercase;
     h1 {
@@ -244,10 +243,8 @@ header {
 }
 form {
     padding: 55/570*100%;
-    outline: 1px solid grey;
     .date {
         padding: 0;
-        outline: 1px solid red;
         margin-bottom: 30px;
         input{
             box-sizing: border-box;
@@ -275,7 +272,6 @@ form {
         line-height: 28px;
         font-weight: 700;
         border: none;
-        outline: 1px solid orange;
 
     }
     .btn {
@@ -292,7 +288,6 @@ form {
 }
 .people {
     padding: 0;
-    outline: 1px solid green;
     margin-bottom: 30px;
     input {
         box-sizing: border-box;
