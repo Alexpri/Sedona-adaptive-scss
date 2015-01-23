@@ -1,0 +1,136 @@
+.form_minus_down, .form_plus_down, .icon_fb, .icon_food, .icon_home, .icon_made_by, .icon_made_by_hover, .icon_made_for, .icon_made_for_hover, .icon_present, .icon_twitter, .icon_youtube, .separate, .sort_down_active, .sort_down_hover, .sort_up_active, .sort_up_hover, .logo, .calendar_active, .form_plus, .form_icon_calendar, .form_minus {
+  background: url("../img/sprites.png") no-repeat;
+}
+
+.form_minus_down {
+  background-position: -270px -19px;
+  width: 11px;
+  height: 3px;
+}
+
+.form_plus_down {
+  background-position: -270px -1px;
+  width: 11px;
+  height: 11px;
+}
+
+.icon_fb {
+  background-position: -238px -58px;
+  width: 9px;
+  height: 19px;
+}
+
+.icon_food {
+  background-position: 0 -79px;
+  width: 74px;
+  height: 70px;
+}
+
+.icon_home {
+  background-position: -144px -77px;
+  width: 75px;
+  height: 72px;
+}
+
+.icon_made_by {
+  background-position: -178px 0;
+  width: 27px;
+  height: 30px;
+}
+
+.icon_made_by_hover {
+  background-position: -177.0px -36px;
+  width: 27px;
+  height: 30px;
+}
+
+.icon_made_for {
+  background-position: -146.99999618530273px 0;
+  width: 27px;
+  height: 33px;
+}
+
+.icon_made_for_hover {
+  background-position: -147px -35px;
+  width: 27px;
+  height: 33px;
+}
+
+.icon_present {
+  background-position: -78.0px -75px;
+  width: 64px;
+  height: 76px;
+}
+
+.icon_twitter {
+  background-position: -257px -39px;
+  width: 19px;
+  height: 15px;
+}
+
+.icon_youtube {
+  background-position: -234px -39px;
+  width: 20px;
+  height: 14px;
+}
+
+.separate {
+  background-position: -232px -69px;
+  width: 2px;
+  height: 26px;
+}
+
+.sort_down_active {
+  background-position: -235px -16px;
+  width: 9px;
+  height: 9px;
+}
+
+.sort_down_hover {
+  background-position: -246px -16px;
+  width: 9px;
+  height: 9px;
+}
+
+.sort_up_active {
+  background-position: -235px -2px;
+  width: 9px;
+  height: 9px;
+}
+
+.sort_up_hover {
+  background-position: -246px -2px;
+  width: 9px;
+  height: 9px;
+}
+
+.logo {
+  margin: 0 auto;
+  background-position: 0 0;
+  width: 138px;
+  height: 70px;
+}
+
+.calendar_active {
+  background-position: -210px -37px;
+  width: 20px;
+  height: 22px;
+}
+
+.form_plus {
+  background-position: -257px -1px;
+  width: 11px;
+  height: 11px;
+}
+
+.form_icon_calendar {
+  background-position: -210px 0;
+  width: 20px;
+  height: 22px;
+}
+
+.form_minus {
+  background-position: -257px -19px;
+  width: 11px;
+  height: 3px;
+}

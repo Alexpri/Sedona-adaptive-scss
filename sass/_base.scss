@@ -1,0 +1,106 @@
+/* start the base fraimwork. */
+
+/* main fraimwork start here */
+.inbox {
+	box-sizing: border-box;
+}
+.to-left { float: left; }
+.to-right { float: right; }
+.inline {
+	display: inline-block;
+	*display: inline;
+	vertical-align: top;
+	zoom: 1;
+}
+.clear {
+	content: "";
+	display: table;
+	height: 0;
+	clear: both;
+	overflow: hidden;
+	visibility: hidden;
+}
+.clearfix:after { @extend .clear; }
+
+/* basic typography */
+@font-face {
+	font-family: "";
+	src:    url(),
+			url(),
+			url(),
+			url();
+}
+body {
+
+}
+h1 {
+
+}
+h2 {
+	
+}
+h3 {
+	
+}
+h4 {
+	
+}
+h6 {
+	
+}
+h6 {
+	
+}
+p, li {
+	font-size: 14px;
+}
+a{
+
+	&:hover{
+
+	}
+}
+ul{
+	li{
+
+	}
+}
+
+/* form style input and other */
+form {
+	input[type="text"], input[type="date"] {
+		-webkit-box-sizing: bodred-box;
+		-moz-box-sizing: bodred-box;
+		box-sizing: bodred-box;
+		outline: none;
+		border: 0;
+		background-color: #f0f0f0;
+		&:focus{
+
+		}
+	}
+	input::-webkit-input-placeholder {
+
+	}
+	input::-moz-input-placeholder {
+
+	}
+	label {
+		-webkit-box-sizing: bodred-box;
+		-moz-box-sizing: bodred-box;
+		box-sizing: border-box;
+		cursor: pointer;
+	}
+}
+ 
+ /* btn styles */
+ .btn {
+	display: inline-block;
+	-webkit-box-sizing: bodred-box;
+	-moz-box-sizing: bodred-box;
+	box-sizing: bodred-box;
+	text-align: center;
+	&:hover{
+		
+	}
+ }
