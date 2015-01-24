@@ -14,7 +14,7 @@
         <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
-	<body>
+	<body onload="initialize()">
 		<header>
 			<div class="wrapper">
 				<a class="menu-logo-mobile" href="index.html"><div class="logo logo-mobile"></div></a>
@@ -107,7 +107,9 @@
 							</div>
 							<input class="btn" type="submit" value="найти">
 						</form>
-						<div class="map"><img src="#" alt=""/></div>
+					</div>
+					<div class="map">
+						<div id="map_canvas"></div>
 					</div>
 				</section>
 			</div>
@@ -129,8 +131,10 @@
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<script src="js/jquery-1.11.2.min.js"></script>
 		<script src="js/main.js"></script>
-		<script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
-		<script src="http://maps.gstatic.com/maps-api-v3/api/js/19/7a/intl/ru_ALL/main.js"></script>
+		<script src="js/map.js"></script>
+		<script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?sensor=SET_TO_TRUE_OR_FALSE">
+    </script>
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
