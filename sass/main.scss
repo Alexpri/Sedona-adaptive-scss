@@ -82,13 +82,31 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
 .wrapper{
+    position: relative;
     max-width: $content-width;
     width: 1200/1280*100%;
     margin: 0 auto;
-}
-header {
     background-color: #fff;
+    &:before {
+        position: absolute;
+        content: "";
+        left: -80px;
+        top: 0;
+        width: 80px;
+        height: 100%;
+        background-color: #efe9e9;
+    }
+    &:after {
+        position: absolute;
+        content: "";
+        right: -80px;
+        top: 0;
+        width: 80px;
+        height: 100%;
+        background-color: #efe9e9;
+    }
 }
 .menu{
     display: block;
@@ -115,10 +133,18 @@ header {
     }
 }
 .mainimage {
-    background: url('../img/mainpage_1280.jpg') no-repeat 0 0;
-    background-size:100%;
     max-width: 1200px;
     height: 508px;
+    padding-top: 75px;
+    background: url('../img/mainpage_1280.jpg') no-repeat 0 0;
+    background-size: 100%;
+}
+.maintext {
+    width: 39.16%;
+    height: 360px;
+    margin: 0 auto;
+    background: url('../img/main-text.png') no-repeat 0 0;
+    background-size: 100%;
 }
 .lions {
     margin-top: 50px;
@@ -151,11 +177,11 @@ header {
     }
 }
 .reason-info {
-    width: 400/1200*100%;
-    height: 256px;
+    width: 33.333334%;
     text-align: center;
     color: #fff;
     background-color: #81b3d2;
+    padding-bottom: 56px;
     z-index: 2;
     h2 {
         margin-top: 50px;
@@ -173,6 +199,7 @@ header {
         font-size: 14px/$font-size-body-large*1em;
         line-height: 26/21;
         margin-top: 20px;
+        margin-bottom: 0;
     }
 }
 .priority {
@@ -252,6 +279,13 @@ form {
     padding: 55px;
     z-index: 10;
     background-color: white;
+    input {
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 700;
+        border: none;
+    }
     .date {
         padding: 0;
         margin-bottom: 30px;
@@ -262,11 +296,6 @@ form {
             width: 350/460*100%;
             margin: 0;
             padding: 7px 30px 7px 15px;
-            text-transform: uppercase;
-            font-size: 14px;
-            line-height: 26px;
-            font-weight: 700;
-            border: none;
         }
     }
     label {
@@ -292,6 +321,8 @@ form {
         color: #fff;
         font-size: 21px/$font-size-body-large*1em;
         line-height: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
         border: none;
     }
 }
@@ -331,14 +362,15 @@ form {
      z-index: 10;
 }
 .visit {
-    padding-left: 120px;
-    padding-top: 50px;
     display: block;
     float: left;
+    padding-left: 120px;
+    padding-top: 50px;
     text-decoration: none;
     font-size: 21px;
     line-height: 26px;
     text-transform: uppercase;
+    font-weight: bold;
 }
 .social-buttons {
     float: left;
@@ -387,13 +419,11 @@ form {
 }
 .design-btn {
     position: relative;
+    margin-right: 50px;
     text-decoration: none;
     font-size: 14px;
     line-height: 26px;
     text-transform: uppercase;
-}
-.by {
-    margin-right: 50px;
 }
 .by:before {
     position: absolute;
@@ -453,7 +483,10 @@ form {
     .mainimage{
         height: 450px;
         margin: 0;
-        padding: 0;
+        padding-top: 50px;
+    }
+    .maintext {
+        height: 340px;
     }
 }
 @media only screen and (min-width: 821px) {
@@ -475,7 +508,10 @@ form {
     .mainimage{
         height: 350px;
         margin: 0;
-        padding: 0;
+        padding-top: 50px;
+        }
+    .maintext {
+        height: 240px;
     }
     .menu{
         a {
@@ -495,12 +531,18 @@ form {
     }
 }
 @media only screen and (min-width: 768px) {
-    
 }
 
 @media only screen and (max-width: 767px) {
+    .wrapper {
+        width: 100%;
+    }
     .mainimage{
         height: 300px;
+        padding-top: 30px;
+    }
+    .maintext {
+        height: inherit;
     }
     .info {
         width: 70%;
@@ -564,8 +606,6 @@ form {
         float: none;
         display: block;
         width: 100%;
-        height: 200px;
-        padding-bottom: 20px;
         h2 {
             margin-top: 0;
             padding-top: 50px;
@@ -588,21 +628,26 @@ form {
         }
     }
     .reg-form {
-        min-width: 440px;
         width: 100%;
         padding: 0;
-        form {
-            padding-left: 0;
-            padding-right: 0;
-        }
     }
     form {
+        box-sizing: border-box;
         width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .map {
+        height: 720px;
+    }
+    .footer-info {
+        height: 180px;
+        background-size: 150% 180px;
     }
     .social-buttons {
         display: block;
         float: none;
-        width: 170px;
+        width: 160px;
         margin: 0 auto;
     }
     .btn-social {
@@ -621,11 +666,15 @@ form {
         margin-bottom: 0;
         margin-left: auto;
     }
+    .for {
+        margin-right: 0;
+    }
     .visit {
         display: block;
         float: none;
-        width: 170px;
+        width: 160px;
         padding-left: 0;
+        padding-top: 20px;
         margin: 0 auto;
     }
 }
@@ -635,7 +684,10 @@ form {
 /* ==============
     MOBILE: Menu
    ============== */
-
+    .mainimage{
+        height: 300px;
+        padding-top: 15px;
+    }
     .mobile-logo {
         display: block;
     }
@@ -669,6 +721,32 @@ form {
             float: none;
             display: block;
             width: 100%;
+        }
+    }
+    .map {
+        height: 720px;
+    }
+    form {
+        input {
+                font-size: 12px;
+            }
+            label {
+                font-size: 12px;
+            }
+            .date {
+                input {
+                font-size: 12px;
+            }
+        }
+    }
+    .visit {
+        padding-top: 10px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    form {
+        .date {
+            margin-bottom: 10px;
         }
     }
 }

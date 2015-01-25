@@ -271,13 +271,29 @@ textarea {
    Author's custom styles
    ========================================================================== */
 .wrapper {
+  position: relative;
   max-width: 1200px;
   width: 93.75%;
   margin: 0 auto;
-}
-
-header {
   background-color: #fff;
+}
+.wrapper:before {
+  position: absolute;
+  content: "";
+  left: -80px;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  background-color: #efe9e9;
+}
+.wrapper:after {
+  position: absolute;
+  content: "";
+  right: -80px;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  background-color: #efe9e9;
 }
 
 .menu {
@@ -306,11 +322,21 @@ header {
 }
 
 .mainimage {
+  max-width: 1200px;
+  height: 508px;
+  padding-top: 75px;
   background: url("../img/mainpage_1280.jpg") no-repeat 0 0;
   -webkit-background-size: 100%;
   background-size: 100%;
-  max-width: 1200px;
-  height: 508px;
+}
+
+.maintext {
+  width: 39.16%;
+  height: 360px;
+  margin: 0 auto;
+  background: url("../img/main-text.png") no-repeat 0 0;
+  -webkit-background-size: 100%;
+  background-size: 100%;
 }
 
 .lions {
@@ -347,11 +373,11 @@ header {
 }
 
 .reason-info {
-  width: 33.33333%;
-  height: 256px;
+  width: 33.333334%;
   text-align: center;
   color: #fff;
   background-color: #81b3d2;
+  padding-bottom: 56px;
   z-index: 2;
 }
 .reason-info h2 {
@@ -370,6 +396,7 @@ header {
   font-size: 0.875em;
   line-height: 26/21;
   margin-top: 20px;
+  margin-bottom: 0;
 }
 
 .priority {
@@ -452,6 +479,13 @@ form {
   z-index: 10;
   background-color: white;
 }
+form input {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  border: none;
+}
 form .date {
   padding: 0;
   margin-bottom: 30px;
@@ -465,11 +499,6 @@ form .date input {
   width: 76.08696%;
   margin: 0;
   padding: 7px 30px 7px 15px;
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 26px;
-  font-weight: 700;
-  border: none;
 }
 form label {
   -webkit-box-sizing: border-box;
@@ -495,6 +524,8 @@ form .btn {
   color: #fff;
   font-size: 1.3125em;
   line-height: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
   border: none;
 }
 
@@ -540,14 +571,15 @@ form .btn {
 }
 
 .visit {
-  padding-left: 120px;
-  padding-top: 50px;
   display: block;
   float: left;
+  padding-left: 120px;
+  padding-top: 50px;
   text-decoration: none;
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .social-buttons {
@@ -603,14 +635,11 @@ form .btn {
 
 .design-btn {
   position: relative;
+  margin-right: 50px;
   text-decoration: none;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
-}
-
-.by {
-  margin-right: 50px;
 }
 
 .by:before {
@@ -676,7 +705,11 @@ form .btn {
   .mainimage {
     height: 450px;
     margin: 0;
-    padding: 0;
+    padding-top: 50px;
+  }
+
+  .maintext {
+    height: 340px;
   }
 }
 @media only screen and (min-width: 821px) {
@@ -696,7 +729,11 @@ form .btn {
   .mainimage {
     height: 350px;
     margin: 0;
-    padding: 0;
+    padding-top: 50px;
+  }
+
+  .maintext {
+    height: 240px;
   }
 
   .menu a {
@@ -715,8 +752,17 @@ form .btn {
   }
 }
 @media only screen and (max-width: 767px) {
+  .wrapper {
+    width: 100%;
+  }
+
   .mainimage {
     height: 300px;
+    padding-top: 30px;
+  }
+
+  .maintext {
+    height: inherit;
   }
 
   .info {
@@ -782,8 +828,6 @@ form .btn {
     float: none;
     display: block;
     width: 100%;
-    height: 200px;
-    padding-bottom: 20px;
   }
   .reason-info h2 {
     margin-top: 0;
@@ -805,23 +849,33 @@ form .btn {
   }
 
   .reg-form {
-    min-width: 440px;
     width: 100%;
     padding: 0;
   }
-  .reg-form form {
-    padding-left: 0;
-    padding-right: 0;
-  }
 
   form {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .map {
+    height: 720px;
+  }
+
+  .footer-info {
+    height: 180px;
+    -webkit-background-size: 150% 180px;
+    background-size: 150% 180px;
   }
 
   .social-buttons {
     display: block;
     float: none;
-    width: 170px;
+    width: 160px;
     margin: 0 auto;
   }
 
@@ -843,11 +897,16 @@ form .btn {
     margin-left: auto;
   }
 
+  .for {
+    margin-right: 0;
+  }
+
   .visit {
     display: block;
     float: none;
-    width: 170px;
+    width: 160px;
     padding-left: 0;
+    padding-top: 20px;
     margin: 0 auto;
   }
 }
@@ -855,6 +914,11 @@ form .btn {
   /* ==============
       MOBILE: Menu
      ============== */
+  .mainimage {
+    height: 300px;
+    padding-top: 15px;
+  }
+
   .mobile-logo {
     display: block;
   }
@@ -894,6 +958,29 @@ form .btn {
     float: none;
     display: block;
     width: 100%;
+  }
+
+  .map {
+    height: 720px;
+  }
+
+  form input {
+    font-size: 12px;
+  }
+  form label {
+    font-size: 12px;
+  }
+  form .date input {
+    font-size: 12px;
+  }
+
+  .visit {
+    padding-top: 10px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  form .date {
+    margin-bottom: 10px;
   }
 }
 /* ==========================================================================
