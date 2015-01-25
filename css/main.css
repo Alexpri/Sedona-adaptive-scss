@@ -275,7 +275,6 @@ body {
 }
 
 .wrapper {
-  position: relative;
   max-width: 1200px;
   width: 93.75%;
   margin: 0 auto;
