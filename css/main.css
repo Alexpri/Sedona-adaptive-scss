@@ -270,30 +270,16 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+  background-color: #efe9e9;
+}
+
 .wrapper {
   position: relative;
   max-width: 1200px;
   width: 93.75%;
   margin: 0 auto;
   background-color: #fff;
-}
-.wrapper:before {
-  position: absolute;
-  content: "";
-  left: -80px;
-  top: 0;
-  width: 80px;
-  height: 100%;
-  background-color: #efe9e9;
-}
-.wrapper:after {
-  position: absolute;
-  content: "";
-  right: -80px;
-  top: 0;
-  width: 80px;
-  height: 100%;
-  background-color: #efe9e9;
 }
 
 .menu {
