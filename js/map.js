@@ -5,7 +5,7 @@
 };*/
 
 function initialize() {
- var latlng = new google.maps.LatLng(57.0442, 9.9116);
+ var latlng = new google.maps.LatLng(34.8573, -111.795);
  var settings = {
  zoom: 15,
  center: latlng,
